@@ -1,5 +1,5 @@
 from django.contrib import admin
-from models import IDC, Rack, EquipGroup, Product, Asset
+from .models import IDC, Rack, EquipGroup, Product, Asset
 
 # Register your models here.
 admin.site.register(IDC)
