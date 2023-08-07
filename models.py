@@ -33,7 +33,7 @@ class Product(models.Model):
 class Asset(models.Model):
     asset_code = models.CharField(max_length=20, primary_key=True)
 
-    group_name = models.ForeignKey(EquipGroup, on_delete=models.CASCASE)
+    group_name = models.ForeignKey(EquipGroup, on_delete=models.CASCADE)
     idc_name = models.ForeignKey(IDC, on_delete=models.CASCADE)
     rack_indicator = models.ForeignKey(Rack, on_delete=models.CASCADE)
     product_name = models.ForeignKey(Product, on_delete=models.CASCADE)
@@ -48,7 +48,7 @@ class Host(models.Model):
     host_os = models.CharField(max_length=16)
     host_os_version = models.CharField(max_length=8)
     
-    network_address = models.IPAddressField()
+    network_address = models.GenericIPAddressField()
     asset_code = models.ForeignKey(Asset, on_delete=models.CASCADE)
     
 
