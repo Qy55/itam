@@ -39,7 +39,7 @@ class Asset(models.Model):
     product_name = models.ForeignKey(Product, on_delete=models.CASCADE)
     
     
-    ext_network_port = models.IntegerField()
+    ext_network_port = models.IntegerField(default=0)
     
     
 class Host(models.Model):

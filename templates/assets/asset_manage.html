@@ -1,0 +1,19 @@
+{% if asset_list %}
+<table>
+    <tr>
+        <th>asset code</th>
+        <th>group name</th>
+        <th>idc name</th>
+        <th>product name</th>
+    <tr>
+    {% for asset in asset_list %}
+    <tr>
+        <td>{{ asset.asset_code }}</td>
+        <td>{{ asset.group_name }}</td>
+        <td>{{ asset.idc_name }}</td>
+        <td>{{ asset.product_name }}</td>
+    </tr>
+    {% endfor %}
+{% else %}
+<p>관리 중인 자산 없음</p>
+{% endif %}
