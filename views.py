@@ -1,6 +1,16 @@
 from django.shortcuts import render
 from .models import Asset
+from django.views import generic
+
 # Create your views here.
+class AssetManage(generic.ListView):
+    template_name = "assets/asset_manage.html"
+    context_object_name = "asset_list"
+    
+    def get_queryset(self):
+        return Asset.objects.all()
+    
+        
 def login(request):
     pass
 
