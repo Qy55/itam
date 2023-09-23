@@ -1,6 +1,15 @@
 {% extends 'assets/default.html' %}
-{% block blk_content %}
+{% block blk_top_ui %}
+{% comment %} {% include 'assets/search.html' %}
+{% include 'assets/extra_bottuns.html' %} {% endcomment %}
+<ul class="content">
+    <li>search ui</li>
+    <li>extra buttons</li>
+</ul>
 
+{% endblock blk_top_ui%}
+
+{% block blk_content %}
 {% if asset_list %}
 <table class="content">
     <tr>
