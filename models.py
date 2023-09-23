@@ -19,9 +19,9 @@ class EquipGroup(models.Model):
     description = models.TextField()
     
 class Product(models.Model):
-    vendor = models.CharField(max_length=32)
     product_name = models.CharField(max_length=64, primary_key=True)
     
+    vendor = models.CharField(max_length=32)
     product_type = models.CharField(max_length=8)    
     
     cpu_socket = models.IntegerField()
