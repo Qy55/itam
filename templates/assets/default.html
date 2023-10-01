@@ -9,8 +9,10 @@
     </head>
     <body>
         {% include "assets/sidebar.html" %}
+        <section class="content">
         {% block blk_top_ui %}{% endblock blk_top_ui %}
         {% block blk_content %}{% endblock blk_content %}
+        </section>
     </body>
 </html>
 
