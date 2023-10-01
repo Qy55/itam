@@ -2,16 +2,18 @@
 {% block blk_top_ui %}
 {% comment %} {% include 'assets/search.html' %}
 {% include 'assets/extra_bottuns.html' %} {% endcomment %}
-<ul class="content">
-    <li>search ui</li>
+{% include "assets/search.html" %}
+<ul>
     <li>extra buttons</li>
 </ul>
-
+{% if search_attr_list %}
+{% endif %}
 {% endblock blk_top_ui%}
 
 {% block blk_content %}
+<h4>Contents</h4>
 {% if asset_list %}
-<table class="content">
+<table>
     <tr>
         <th>asset code</th>
         <th>group name</th>
